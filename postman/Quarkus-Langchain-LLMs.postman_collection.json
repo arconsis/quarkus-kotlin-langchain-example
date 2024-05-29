@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "bec6d320-a2e3-42a9-8cad-0a0180c162c3",
+		"name": "Quarkus-Langchain-LLMs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4591907"
+	},
+	"item": [
+		{
+			"name": "poem",
+			"item": [
+				{
+					"name": "write a poem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/poem?topic=Quarkus and Kotlin are a match made in heaven&lines=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"poem"
+							],
+							"query": [
+								{
+									"key": "topic",
+									"value": "Quarkus and Kotlin are a match made in heaven"
+								},
+								{
+									"key": "lines",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "write a poem streaming",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/poem/streaming?topic=Quarkus and Kotlin are a match made in heaven",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"poem",
+								"streaming"
+							],
+							"query": [
+								{
+									"key": "topic",
+									"value": "Quarkus and Kotlin are a match made in heaven"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "chat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/chat?prompt=Hi, my name is Andreas&userId=Andreas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"chat"
+							],
+							"query": [
+								{
+									"key": "prompt",
+									"value": "Hi, my name is Andreas"
+								},
+								{
+									"key": "prompt",
+									"value": "What is my name?",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "Andreas"
+								},
+								{
+									"key": "userId",
+									"value": "Felix",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "quarkus langchain bot",
+			"item": [
+				{
+					"name": "chat with quarkus bot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/docs/quarkus-langchain?userId=2&prompt=How can I get started with Quarkus langchain to call ChatGPT?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"docs",
+								"quarkus-langchain"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								},
+								{
+									"key": "prompt",
+									"value": "How can I get started with Quarkus langchain to call ChatGPT?"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mails",
+			"item": [
+				{
+					"name": "write a mail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mails?query=looks good, send it.&userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mails"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Hi, I'm Andreas",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "Hi, I'm Andreas. I want to write an e-mail to Hans Moleman.",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "I meant the one from arconsis",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "The mail should explain why Quarkus is such a great framework and for Java and Kotlin developers. Please write a nice email.",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "what is the content of the mail",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "looks good, send it."
+								},
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "query",
+									"value": "Please write an email to test@arconsis.com about how great Quarkus is.",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "Please use my name Andreas for the regards",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a mail conversation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mails/conversation?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mails",
+								"conversation"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Hi, I'm Andreas",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "I want to write a mail to Bernd Meier",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "The mail should explain why Quarkus is such a great framework and for Java and Kotlin developers. ",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
