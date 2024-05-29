@@ -10,7 +10,7 @@ import jakarta.enterprise.context.ApplicationScoped
 
 @ApplicationScoped
 @RegisterAiService(tools = [EmailService::class, AddressBookService::class])
-interface MailAiService {
+interface MailAgentAiService {
 
     @SystemMessage(
         """

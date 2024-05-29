@@ -8,7 +8,7 @@ import jakarta.enterprise.context.ApplicationScoped
 
 @RegisterAiService
 @ApplicationScoped
-interface SimpleChatBotService {
+interface ChatWithMemoryAiService {
 
     fun sendPrompt(@MemoryId userId: String, @UserMessage query: String): String
 }

@@ -1,6 +1,6 @@
 package com.arconsis.youtube.quarkus.langchain.rest
 
-import com.arconsis.youtube.quarkus.langchain.services.ai.MailAiService
+import com.arconsis.youtube.quarkus.langchain.services.ai.MailAgentAiService
 import io.quarkiverse.langchain4j.ChatMemoryRemover
 import jakarta.ws.rs.DELETE
 import jakarta.ws.rs.GET
@@ -10,7 +10,7 @@ import jakarta.ws.rs.core.MediaType
 import org.jboss.resteasy.reactive.RestQuery
 
 @Path("/mails")
-class MailResource(private val aiService: MailAiService) {
+class MailAgentResource(private val aiService: MailAgentAiService) {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

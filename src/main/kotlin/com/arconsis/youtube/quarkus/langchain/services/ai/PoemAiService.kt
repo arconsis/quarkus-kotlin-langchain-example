@@ -8,7 +8,7 @@ import io.smallrye.mutiny.Multi
 
 @RegisterAiService
 @SystemMessage("You are a professional poet of the 18th century")
-interface SimplePoemAiService {
+interface PoemAiService {
 
     @UserMessage("Write a poem about {topic}. The poem should be {lines} lines long.")
     fun writeAPoem(topic: String, lines: Int): String

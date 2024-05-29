@@ -8,7 +8,7 @@ import jakarta.ws.rs.core.MediaType
 import org.jboss.resteasy.reactive.RestQuery
 
 @Path("/docs/quarkus-langchain")
-class QuarkusDocumentationResource(private val quarkusDocumentationAiService: QuarkusDocumentationAiService) {
+class QuarkusDocumentationBotResource(private val quarkusDocumentationAiService: QuarkusDocumentationAiService) {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

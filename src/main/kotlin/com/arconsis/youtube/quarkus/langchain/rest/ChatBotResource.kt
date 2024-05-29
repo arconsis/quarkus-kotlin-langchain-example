@@ -1,8 +1,7 @@
 package com.arconsis.youtube.quarkus.langchain.rest
 
-import com.arconsis.youtube.quarkus.langchain.services.ai.SimpleChatBotService
+import com.arconsis.youtube.quarkus.langchain.services.ai.ChatWithMemoryAiService
 import io.quarkiverse.langchain4j.ChatMemoryRemover
-import io.quarkus.logging.Log
 import jakarta.ws.rs.DELETE
 import jakarta.ws.rs.GET
 import jakarta.ws.rs.Path
@@ -11,7 +10,7 @@ import jakarta.ws.rs.core.MediaType
 import org.jboss.resteasy.reactive.RestQuery
 
 @Path("/chat")
-class ChatResource(private val aiService: SimpleChatBotService) {
+class ChatBotResource(private val aiService: ChatWithMemoryAiService) {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

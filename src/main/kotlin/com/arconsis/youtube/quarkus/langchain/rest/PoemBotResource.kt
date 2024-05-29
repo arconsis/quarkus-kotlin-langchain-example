@@ -1,6 +1,6 @@
 package com.arconsis.youtube.quarkus.langchain.rest
 
-import com.arconsis.youtube.quarkus.langchain.services.ai.SimplePoemAiService
+import com.arconsis.youtube.quarkus.langchain.services.ai.PoemAiService
 import io.smallrye.mutiny.Multi
 import jakarta.ws.rs.DefaultValue
 import jakarta.ws.rs.GET
@@ -12,7 +12,7 @@ import org.jboss.resteasy.reactive.RestStreamElementType
 
 @Path("/poem")
 @Produces(MediaType.TEXT_PLAIN)
-class PoemResource(private val myAiService: SimplePoemAiService) {
+class PoemBotResource(private val myAiService: PoemAiService) {
 
     @GET
     fun writePoem(@RestQuery topic: String, @DefaultValue("8") @RestQuery lines: Int): String {
