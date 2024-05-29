@@ -11,6 +11,7 @@ import jakarta.enterprise.context.ApplicationScoped
 @ApplicationScoped
 @RegisterAiService(tools = [EmailService::class, AddressBookService::class])
 interface MailAiService {
+
     @SystemMessage(
         """
 You are an email assistant AI. You guide the user through the process of sending an email.

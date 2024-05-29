@@ -32,9 +32,8 @@ dependencies {
     implementation("io.quarkiverse.langchain4j:quarkus-langchain4j-openai")
 //    implementation("io.quarkiverse.langchain4j:quarkus-langchain4j-hugging-face")
 
-//    implementation("io.quarkiverse.langchain4j:quarkus-langchain4j-easy-rag")
     implementation("io.quarkiverse.langchain4j:quarkus-langchain4j-redis")
-
+    implementation("dev.langchain4j:langchain4j-document-parser-apache-pdfbox")
 
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
