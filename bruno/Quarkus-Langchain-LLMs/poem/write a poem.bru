@@ -1,0 +1,16 @@
+meta {
+  name: write a poem
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/poem?topic=Quarkus and Kotlin are a match made in heaven&lines=8
+  body: none
+  auth: none
+}
+
+query {
+  topic: Quarkus and Kotlin are a match made in heaven
+  lines: 8
+}

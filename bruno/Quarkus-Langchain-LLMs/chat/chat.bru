@@ -1,0 +1,18 @@
+meta {
+  name: chat
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/chat?prompt=Hi, my name is Andreas&userId=Andreas
+  body: none
+  auth: none
+}
+
+query {
+  prompt: Hi, my name is Andreas
+  userId: Andreas
+  ~prompt: What is my name?
+  ~userId: Felix
+}

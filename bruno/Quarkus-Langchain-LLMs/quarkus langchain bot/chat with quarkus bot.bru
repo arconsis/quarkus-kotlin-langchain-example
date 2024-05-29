@@ -1,0 +1,16 @@
+meta {
+  name: chat with quarkus bot
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/docs/quarkus-langchain?userId=2&prompt=How can I get started with Quarkus langchain to call ChatGPT?
+  body: none
+  auth: none
+}
+
+query {
+  userId: 2
+  prompt: How can I get started with Quarkus langchain to call ChatGPT?
+}

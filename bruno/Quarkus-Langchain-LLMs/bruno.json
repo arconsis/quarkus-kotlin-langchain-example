@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Quarkus-Langchain-LLMs",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
