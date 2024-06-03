@@ -107,6 +107,31 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "delete a chat conversation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/chat?userId=Andreas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"chat"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "Andreas"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -119,7 +144,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/docs/quarkus-langchain?userId=2&prompt=How can I do it with gradle Kotlin dsl?",
+							"raw": "http://localhost:8080/docs/quarkus-langchain?userId=2&prompt=How can I get started with Quarkus langchain to call ChatGPT?",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -136,12 +161,12 @@
 								},
 								{
 									"key": "prompt",
-									"value": "How can I get started with Quarkus langchain to call ChatGPT?",
-									"disabled": true
+									"value": "How can I get started with Quarkus langchain to call ChatGPT?"
 								},
 								{
 									"key": "prompt",
-									"value": "How can I do it with gradle Kotlin dsl?"
+									"value": "How can I do it with gradle Kotlin dsl?",
+									"disabled": true
 								}
 							]
 						}
@@ -159,7 +184,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/mails?query=looks good, send it.&userId=1",
+							"raw": "http://localhost:8080/mails?userId=Felix&query=Hi, I'm Felix",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -170,18 +195,21 @@
 							],
 							"query": [
 								{
+									"key": "userId",
+									"value": "Felix"
+								},
+								{
 									"key": "query",
-									"value": "Hi, I'm Andreas",
+									"value": "Hi, I'm Felix"
+								},
+								{
+									"key": "query",
+									"value": "I want to write an e-mail to Hans Maulwurf.",
 									"disabled": true
 								},
 								{
 									"key": "query",
-									"value": "Hi, I'm Andreas. I want to write an e-mail to Hans Moleman.",
-									"disabled": true
-								},
-								{
-									"key": "query",
-									"value": "I meant the one from arconsis",
+									"value": "The one from arconsis",
 									"disabled": true
 								},
 								{
@@ -191,25 +219,7 @@
 								},
 								{
 									"key": "query",
-									"value": "what is the content of the mail",
-									"disabled": true
-								},
-								{
-									"key": "query",
-									"value": "looks good, send it."
-								},
-								{
-									"key": "userId",
-									"value": "1"
-								},
-								{
-									"key": "query",
-									"value": "Please write an email to test@arconsis.com about how great Quarkus is.",
-									"disabled": true
-								},
-								{
-									"key": "query",
-									"value": "Please use my name Andreas for the regards",
+									"value": "Looks good. Send it!",
 									"disabled": true
 								}
 							]
@@ -218,12 +228,12 @@
 					"response": []
 				},
 				{
-					"name": "delete a mail conversation",
+					"name": "delete a chat conversation Copy",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/mails/conversation?userId=1",
+							"raw": "http://localhost:8080/mails/conversations?userId=Felix",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -231,27 +241,12 @@
 							"port": "8080",
 							"path": [
 								"mails",
-								"conversation"
+								"conversations"
 							],
 							"query": [
 								{
-									"key": "query",
-									"value": "Hi, I'm Andreas",
-									"disabled": true
-								},
-								{
-									"key": "query",
-									"value": "I want to write a mail to Bernd Meier",
-									"disabled": true
-								},
-								{
-									"key": "query",
-									"value": "The mail should explain why Quarkus is such a great framework and for Java and Kotlin developers. ",
-									"disabled": true
-								},
-								{
 									"key": "userId",
-									"value": "1"
+									"value": "Felix"
 								}
 							]
 						}
