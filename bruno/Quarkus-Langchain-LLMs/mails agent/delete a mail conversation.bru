@@ -1,0 +1,15 @@
+meta {
+  name: delete a mail conversation
+  type: http
+  seq: 2
+}
+
+delete {
+  url: http://localhost:8080/mails/conversations?userId=Felix
+  body: none
+  auth: none
+}
+
+query {
+  userId: Felix
+}

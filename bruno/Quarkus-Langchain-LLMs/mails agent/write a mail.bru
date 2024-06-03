@@ -1,0 +1,20 @@
+meta {
+  name: write a mail
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/mails?userId=Felix&query=Hi, I'm Felix
+  body: none
+  auth: none
+}
+
+query {
+  userId: Felix
+  query: Hi, I'm Felix
+  ~query: I want to write an e-mail to Hans Maulwurf.
+  ~query: The one from arconsis
+  ~query: The mail should explain why Quarkus is such a great framework and for Java and Kotlin developers. Please write a nice email.
+  ~query: Looks good. Send it!
+}
