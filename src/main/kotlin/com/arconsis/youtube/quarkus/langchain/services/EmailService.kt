@@ -11,5 +11,4 @@ class EmailService {
     fun sendAnEmailWithRecipientSubjectAndContent(recipientEmail: String, subject: String, content: String) {
         Log.info("Sending an email to: $recipientEmail with subject $subject and content: $content")
     }
-
 }
