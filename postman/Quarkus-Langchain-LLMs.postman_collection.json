@@ -119,7 +119,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/docs/quarkus-langchain?userId=2&prompt=How can I get started with Quarkus langchain to call ChatGPT?",
+							"raw": "http://localhost:8080/docs/quarkus-langchain?userId=2&prompt=How can I do it with gradle Kotlin dsl?",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -136,7 +136,12 @@
 								},
 								{
 									"key": "prompt",
-									"value": "How can I get started with Quarkus langchain to call ChatGPT?"
+									"value": "How can I get started with Quarkus langchain to call ChatGPT?",
+									"disabled": true
+								},
+								{
+									"key": "prompt",
+									"value": "How can I do it with gradle Kotlin dsl?"
 								}
 							]
 						}
@@ -146,7 +151,7 @@
 			]
 		},
 		{
-			"name": "mails",
+			"name": "mails agent",
 			"item": [
 				{
 					"name": "write a mail",
