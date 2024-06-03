@@ -1,3 +1,5 @@
+@file:Suppress("CdiInjectionPointsInspection")
+
 package com.arconsis.youtube.quarkus.langchain.services.rag
 
 import dev.langchain4j.model.embedding.EmbeddingModel
