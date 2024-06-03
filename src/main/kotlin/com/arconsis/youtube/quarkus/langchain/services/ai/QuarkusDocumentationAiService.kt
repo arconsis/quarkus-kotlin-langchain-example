@@ -1,3 +1,5 @@
+@file:Suppress("CdiManagedBeanInconsistencyInspection")
+
 package com.arconsis.youtube.quarkus.langchain.services.ai
 
 import com.arconsis.youtube.quarkus.langchain.services.rag.RetrievalAugmentorSupplier
