@@ -1,5 +1,6 @@
-package com.arconsis.youtube.quarkus.langchain.rest
+@file:Suppress("CdiInjectionPointsInspection")
 
+package com.arconsis.youtube.quarkus.langchain.rest
 import com.arconsis.youtube.quarkus.langchain.services.ai.PoemAiService
 import io.smallrye.mutiny.Multi
 import jakarta.ws.rs.DefaultValue

@@ -1,3 +1,5 @@
+@file:Suppress("CdiInjectionPointsInspection")
+
 package com.arconsis.youtube.quarkus.langchain.rest
 
 import com.arconsis.youtube.quarkus.langchain.services.ai.QuarkusDocumentationAiService
