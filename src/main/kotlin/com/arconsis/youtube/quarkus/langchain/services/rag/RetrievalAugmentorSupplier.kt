@@ -2,16 +2,17 @@
 
 package com.arconsis.youtube.quarkus.langchain.services.rag
 
+import dev.langchain4j.data.segment.TextSegment
 import dev.langchain4j.model.embedding.EmbeddingModel
 import dev.langchain4j.rag.DefaultRetrievalAugmentor
 import dev.langchain4j.rag.RetrievalAugmentor
 import dev.langchain4j.rag.content.retriever.EmbeddingStoreContentRetriever
-import io.quarkiverse.langchain4j.redis.RedisEmbeddingStore
+import dev.langchain4j.store.embedding.EmbeddingStore
 import jakarta.inject.Singleton
 import java.util.function.Supplier
 
 @Singleton
-class RetrievalAugmentorSupplier(store: RedisEmbeddingStore, model: EmbeddingModel) : Supplier<RetrievalAugmentor> {
+class RetrievalAugmentorSupplier(store: EmbeddingStore<TextSegment>, model: EmbeddingModel) : Supplier<RetrievalAugmentor> {
     private val augmentor: RetrievalAugmentor
 
     init {
