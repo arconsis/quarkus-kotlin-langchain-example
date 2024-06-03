@@ -10,7 +10,6 @@ import dev.langchain4j.model.embedding.EmbeddingModel
 import dev.langchain4j.store.embedding.EmbeddingStoreIngestor
 import io.quarkiverse.langchain4j.redis.RedisEmbeddingStore
 import io.quarkus.runtime.StartupEvent
-import io.smallrye.common.annotation.Blocking
 import jakarta.enterprise.context.ApplicationScoped
 import jakarta.enterprise.event.Observes
 import org.eclipse.microprofile.config.inject.ConfigProperty
